@@ -18,6 +18,7 @@ num_features = ['Total Time Spent on Website', 'Page Views Per Visit']
 X_train = pd.read_csv("1_dataset/xtrain.csv")
 # pickle_logistic
 with open('2_model/pickle/logistic_model.pkl', 'rb') as file:
+    st.write("importing model")
     pickle_logistic = pickle.load(file)
 col1, col2, col3 = st.columns(3)
 test = pd.DataFrame()
