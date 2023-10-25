@@ -77,7 +77,7 @@ def main():
     feature_list.extend(num_features)
 
     if st.button("Predict"):
-        test = pd.DataFrame([features], columns=X_train.columns)
+        test = pd.DataFrame([features], columns=X_train.drop('Unnamed: 0', axis=1).columns)
         st.write("Predicting for:")
         st.write(test[X_train.drop('Unnamed: 0', axis=1).columns])
         st.write(X_train.head())
