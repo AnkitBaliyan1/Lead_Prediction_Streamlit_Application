@@ -77,10 +77,10 @@ def main():
     feature_list.extend(num_features)
 
     if st.button("Predict"):
-        test = pd.DataFrame([features], columns=feature_list)
+        # test = pd.DataFrame([features], columns=X_train.columns)
         st.write(test)
-        st.write(X_train)
-        predicted = pickle_logistic.predict(test)
+        st.write(X_train.head())
+        predicted = pickle_logistic.predict(X_train.head(1))
         if predicted:
             st.write("This lead will be converted successfully.")
         else:
