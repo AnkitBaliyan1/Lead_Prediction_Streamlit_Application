@@ -78,7 +78,7 @@ def main():
 
     if st.button("Predict"):
         # test = pd.DataFrame([features], columns=X_train.columns)
-        st.write(test)
+        # st.write(test)
         st.write(X_train.head())
         predicted = pickle_logistic.predict(X_train.head(1))
         if predicted:
