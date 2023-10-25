@@ -2,12 +2,12 @@ import pandas as pd
 import pickle
 import streamlit as st
 
-st.image("../4_images/title.jpeg", width=200)
+st.image("4_images/title.jpeg", width=200)
 st.title("Lead Predictions Web App")
 
 
 # pickle_logistic
-with open('../2_model/pickle/logistic_model.pkl', 'rb') as file:
+with open('2_model/pickle/logistic_model.pkl', 'rb') as file:
     pickle_logistic = pickle.load(file)
 
 cat_features = ['Lead Origin', 'Lead Source', 'Do Not Email', 'TotalVisits',
@@ -19,7 +19,7 @@ cat_features = ['Lead Origin', 'Lead Source', 'Do Not Email', 'TotalVisits',
 num_features = ['Total Time Spent on Website', 'Page Views Per Visit']
 
 
-X_train = pd.read_csv("../1_dataset/xtrain.csv")
+X_train = pd.read_csv("1_dataset/xtrain.csv")
 col1, col2, col3 = st.columns(3)
 i = 0
 test = pd.DataFrame()
