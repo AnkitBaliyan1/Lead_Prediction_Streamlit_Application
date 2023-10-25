@@ -23,7 +23,7 @@ test = pd.DataFrame()
 # pickle_logistic = pickle.load('logistic_model.pkl')
 
 # pickle_logistic
-with open('logistic_model.pkl', 'r') as file:
+with open('logistic_model.pkl', 'rb') as file:
     st.write("importing model")
     pickle_logistic = pickle.load(file)
 
