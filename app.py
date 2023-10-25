@@ -20,7 +20,7 @@ X_train = pd.read_csv("1_dataset/xtrain.csv")
 col1, col2, col3 = st.columns(3)
 test = pd.DataFrame()
 
-pickle_logistic = pickle.load('logistic_model.pkl')
+# pickle_logistic = pickle.load('logistic_model.pkl')
 
 # pickle_logistic
 with open('logistic_model.pkl', 'rb') as file:
