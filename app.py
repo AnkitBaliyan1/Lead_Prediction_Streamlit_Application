@@ -5,11 +5,6 @@ import streamlit as st
 st.image("4_images/title.jpeg", width=200)
 st.title("Lead Predictions Web App")
 
-# pickle_logistic
-with open('logistic_model.pkl', 'rb') as file:
-    st.write("importing model")
-    pickle_logistic = pickle.load(file)
-
 cat_features = ['Lead Origin', 'Lead Source', 'Do Not Email', 'TotalVisits',
                    'Last Activity', 'Country', 'Specialization',
                    'What is your current occupation', 'Tags', 'Lead Quality', 'City',
@@ -23,6 +18,10 @@ X_train = pd.read_csv("1_dataset/xtrain.csv")
 col1, col2, col3 = st.columns(3)
 test = pd.DataFrame()
 
+# pickle_logistic
+with open('logistic_model.pkl', 'rb') as file:
+    st.write("importing model")
+    pickle_logistic = pickle.load(file)
 
 def main():
     st.write("Select Categorical Column")
