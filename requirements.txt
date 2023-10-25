@@ -4,3 +4,4 @@ streamlit==1.27.2
 streamlit-option-menu==0.3.6
 sklearn
 scikit-learn
+joblib
