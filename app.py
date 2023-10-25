@@ -6,7 +6,7 @@ st.image("4_images/title.jpeg", width=200)
 st.title("Lead Predictions Web App")
 
 # pickle_logistic
-with open('2_model/pickle/logistic_model.pkl', 'rb') as file:
+with open('logistic_model.pkl', 'rb') as file:
     st.write("importing model")
     pickle_logistic = pickle.load(file)
 
