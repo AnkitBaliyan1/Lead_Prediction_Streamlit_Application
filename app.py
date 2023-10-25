@@ -1,6 +1,7 @@
 import pandas as pd
 import pickle
 import streamlit as st
+import joblib
 
 
 st.image("4_images/title.jpeg", width=200)
@@ -22,7 +23,7 @@ test = pd.DataFrame()
 # pickle_logistic
 with open('logistic_model.pkl', 'rb') as file:
     st.write("importing model")
-    pickle_logistic = pickle.load(file)
+    pickle_logistic = joblib.load(file)
 
 def main():
     st.write("Select Categorical Column")
