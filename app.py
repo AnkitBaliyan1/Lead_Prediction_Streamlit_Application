@@ -80,7 +80,6 @@ def main():
         test = pd.DataFrame([features], columns=X_train.drop('Unnamed: 0', axis=1).columns)
         st.write("Predicting for:")
         st.write(test[X_train.drop('Unnamed: 0', axis=1).columns])
-        st.write(X_train.head())
         predicted = pickle_logistic.predict(test[X_train.drop('Unnamed: 0', axis=1).columns])
         if predicted:
             st.write("This lead will be converted successfully.")
