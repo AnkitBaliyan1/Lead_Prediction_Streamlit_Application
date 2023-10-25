@@ -28,7 +28,6 @@ with open('logistic_model.pkl', 'rb') as file:
     pickle_logistic = pickle.load(file)
 
 def main():
-    st.write("Select Categorical Column")
     with col1:
         feature_0 = st.selectbox(f"{cat_features[0]}", X_train[f"{cat_features[0]}"].unique())
     with col2:
@@ -63,8 +62,6 @@ def main():
         feature_15 = st.selectbox(f"{cat_features[15]}", X_train[f"{cat_features[15]}"].unique())
     with col2:
         feature_16 = st.selectbox(f"{cat_features[16]}", X_train[f"{cat_features[16]}"].unique())
-
-    st.write("select numerical column")
     with col1:
         feature_17 = float(st.text_input(f"{num_features[0]} - between 0 and 1",0))
     with col2:
@@ -81,6 +78,8 @@ def main():
 
     if st.button("Predict"):
         test = pd.DataFrame([features], columns=feature_list)
+        st.write(test)
+        st.write(X_train)
         predicted = pickle_logistic.predict(test)
         if predicted:
             st.write("This lead will be converted successfully.")
