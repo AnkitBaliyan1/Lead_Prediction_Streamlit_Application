@@ -1,6 +1,7 @@
 import pandas as pd
 import pickle
 import streamlit as st
+import sklearn
 
 st.image("4_images/title.jpeg", width=200)
 st.title("Lead Predictions Web App")
