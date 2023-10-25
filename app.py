@@ -1,6 +1,7 @@
 import pandas as pd
 import pickle
 import streamlit as st
+from sklearn.linear_model import LogisticRegression
 
 st.image("4_images/title.jpeg", width=200)
 st.title("Lead Predictions Web App")
@@ -15,7 +16,6 @@ num_features = ['Total Time Spent on Website', 'Page Views Per Visit']
 
 
 X_train = pd.read_csv("1_dataset/xtrain.csv")
-st.write("x_train loaded")
 # pickle_logistic
 with open('2_model/pickle/logistic_model.pkl', 'rb') as file:
     pickle_logistic = pickle.load(file)
